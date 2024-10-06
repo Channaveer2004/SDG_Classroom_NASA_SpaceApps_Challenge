@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { ClerkProvider, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import Link from "next/link";
+import { ClerkProvider, SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/nextjs";
 import "./globals.css";
 
 // Import and configure the fonts
@@ -35,12 +34,12 @@ export default function RootLayout({
           {/* Header with the Sign In/Out Button */}
           <header className="flex justify-end items-center p-4">
             <SignedOut>
-              {/* Custom Sign In Button */}
-              <Link href="/sign-in">
+              {/* Custom Sign In Button using Clerk's SignInButton */}
+              <SignInButton>
                 <button className="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
                   Sign In
                 </button>
-              </Link>
+              </SignInButton>
             </SignedOut>
             <SignedIn>
               {/* User Button (UserProfile or SignOut) */}
