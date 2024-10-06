@@ -8,103 +8,103 @@ export default function Page() {
       id: 1, 
       title: "No Poverty", 
       content: "End poverty in all its forms everywhere.\nEnsuring equal access to resources and opportunities for all.",
-      imageUrl: "images/no-poverty.jpg" 
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sustainable_Development_Goal_1.png/1200px-Sustainable_Development_Goal_1.png" 
     },
     { 
       id: 2, 
       title: "Zero Hunger", 
       content: "End hunger, achieve food security and improved nutrition.\nPromote sustainable agriculture and resilient food production systems.", 
-      imageUrl: "/images/zero-hunger.jpg" 
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ybgz1OHr5KVQw72g3UbgCNiTV9AMnoODbw&s" 
     },
     { 
       id: 3, 
       title: "Good Health and Well-Being", 
       content: "Ensure healthy lives and promote well-being for all at all ages.\nUniversal health coverage and access to quality essential health services.", 
-      imageUrl: "/images/good-health.jpg" 
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c4/Sustainable_Development_Goal_3.png" 
     },
     { 
       id: 4, 
       title: "Quality Education", 
       content: "Ensure inclusive and equitable quality education for all.\nPromote lifelong learning opportunities for everyone.", 
-      imageUrl: "/images/quality-education.jpg" 
+      imageUrl: "https://logowik.com/content/uploads/images/the-global-goals-quality-education7536.jpg" 
     },
     { 
       id: 5, 
       title: "Gender Equality", 
       content: "Achieve gender equality and empower all women and girls.\nEnd discrimination and violence against women and girls.", 
-      imageUrl: "/images/gender-equality.jpg" 
+      imageUrl: "https://wmo.int/sites/default/files/styles/prose_1x/public/2023-03/E-WEB-Goal-05.png?itok=TXaIZCSt" 
     },
     { 
       id: 6, 
       title: "Clean Water and Sanitation", 
       content: "Ensure availability and sustainable management of water and sanitation.\nWater and sanitation for all, ensuring access for the most vulnerable.", 
-      imageUrl: "/images/clean-water.jpg" 
+      imageUrl: "https://ggiindia.in/wp-content/uploads/2020/06/goal6.png" 
     },
     { 
       id: 7, 
       title: "Affordable and Clean Energy", 
       content: "Ensure access to affordable, reliable, sustainable and modern energy.\nPromote renewable energy sources and improve energy efficiency.", 
-      imageUrl: "/images/clean-energy.jpg" 
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8TJwzrxplpeHh3U0p1h5jZnELaxylTW3u-g&s" 
     },
     { 
       id: 8, 
       title: "Decent Work and Economic Growth", 
       content: "Promote sustained, inclusive and sustainable economic growth.\nFull and productive employment and decent work for all.", 
-      imageUrl: "/images/decent-work.jpg" 
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmveBB_ZENwm1fMHoLkelD_QenPOyefYAjJw&s" 
     },
     { 
       id: 9, 
       title: "Industry, Innovation and Infrastructure", 
       content: "Build resilient infrastructure, promote inclusive and sustainable industrialization.\nFoster innovation and support research and development.", 
-      imageUrl: "/images/industry-innovation.jpg" 
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdbjz7b55tfkDnuf3dTveh5zWrrXKcSUV7Uw&s" 
     },
     { 
       id: 10, 
       title: "Reduced Inequality", 
       content: "Reduce inequality within and among countries.\nEnsure equal opportunities and promote social, economic, and political inclusion.", 
-      imageUrl: "/images/reduced-inequality.jpg" 
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Sustainable_Development_Goal_10ReducedInequalities.svg/1200px-Sustainable_Development_Goal_10ReducedInequalities.svg.png" 
     },
     { 
       id: 11, 
       title: "Sustainable Cities and Communities", 
       content: "Make cities and human settlements inclusive, safe, resilient and sustainable.\nAccess to safe and affordable housing and basic services.", 
-      imageUrl: "./images/sustainable-cities.jpg" 
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Sustainable_Development_Goal_11.png/1200px-Sustainable_Development_Goal_11.png" 
     },
     { 
       id: 12, 
       title: "Responsible Consumption and Production", 
       content: "Ensure sustainable consumption and production patterns.\nReduce waste generation through prevention, reduction, recycling, and reuse.", 
-      imageUrl: "/images/responsible-consumption.jpg" 
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Sustainable_Development_Goal_12.png" 
     },
     { 
       id: 13, 
       title: "Climate Action", 
       content: "Take urgent action to combat climate change and its impacts.\nIntegrate climate change measures into national policies and strategies.", 
-      imageUrl: "/images/climate-action.jpg" 
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Sustainable_Development_Goal_13Climate.svg/1200px-Sustainable_Development_Goal_13Climate.svg.png" 
     },
     { 
       id: 14, 
       title: "Life Below Water", 
       content: "Conserve and sustainably use the oceans, seas and marine resources.\nPrevent and reduce marine pollution and protect marine ecosystems.", 
-      imageUrl: "/images/life-below-water.jpg" 
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/63/Sustainable_Development_Goal_14.png" 
     },
     { 
       id: 15, 
       title: "Life on Land", 
       content: "Protect, restore and promote sustainable use of terrestrial ecosystems.\nManage forests sustainably, combat desertification, and halt biodiversity loss.", 
-      imageUrl: "/images/life-on-land.jpg" 
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/18/Sustainable_Development_Goal_15.png" 
     },
     { 
       id: 16, 
       title: "Peace, Justice and Strong Institutions", 
       content: "Promote peaceful and inclusive societies for sustainable development.\nProvide access to justice for all and build effective, accountable institutions.", 
-      imageUrl: "/images/peace-justice.jpg" 
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Sustainable_Development_Goal_16.png/1200px-Sustainable_Development_Goal_16.png" 
     },
     { 
       id: 17, 
       title: "Partnerships for the Goals", 
       content: "Strengthen the means of implementation and revitalize the global partnership for sustainable development.\nEnhance international cooperation to facilitate access to science and technology.", 
-      imageUrl: "/images/partnerships.jpg" 
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Sustainable_Development_Goal_17Partnerships.svg/1200px-Sustainable_Development_Goal_17Partnerships.svg.png" 
     },
   ]
 
@@ -138,7 +138,7 @@ function CardGrid({ cards }: { cards: { id: number; title: string; content: stri
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredCards.map((card) => (
           <Link key={card.id} href={`/goal/${card.id}`}>
-            <Card className="bg-white border shadow rounded-lg overflow-hidden">
+            <Card className="bg-black border shadow rounded-lg overflow-hidden">
               <CardHeader>
                 <CardTitle>{card.title}</CardTitle>
                 <img 

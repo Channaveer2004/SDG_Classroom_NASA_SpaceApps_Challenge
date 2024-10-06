@@ -6,65 +6,65 @@ import { useTheme } from "next-themes"
 const questions = [
   {
     id: 1,
-    question: 'What is the capital of France?',
-    options: ['Berlin', 'Madrid', 'Paris', 'Rome'],
-    answer: 'Paris',
+    question: 'Which SDG aims to end poverty in all its forms everywhere?',
+    options: ['SDG 1: No Poverty', 'SDG 2: Zero Hunger', 'SDG 3: Good Health and Well-Being', 'SDG 4: Quality Education'],
+    answer: 'SDG 1: No Poverty',
   },
   {
     id: 2,
-    question: 'Which planet is known as the Red Planet?',
-    options: ['Mars', 'Earth', 'Jupiter', 'Venus'],
-    answer: 'Mars',
+    question: 'Which SDG focuses on ensuring access to affordable, reliable, sustainable, and modern energy for all?',
+    options: ['SDG 6: Clean Water and Sanitation', 'SDG 7: Affordable and Clean Energy', 'SDG 8: Decent Work and Economic Growth', 'SDG 9: Industry, Innovation, and Infrastructure'],
+    answer: 'SDG 7: Affordable and Clean Energy',
   },
   {
     id: 3,
-    question: 'Who wrote "Romeo and Juliet"?',
-    options: ['William Shakespeare', 'Charles Dickens', 'J.K. Rowling', 'Mark Twain'],
-    answer: 'William Shakespeare',
+    question: 'What is the goal of SDG 13?',
+    options: ['Climate Action', 'Life Below Water', 'Life on Land', 'Partnerships for the Goals'],
+    answer: 'Climate Action',
   },
   {
     id: 4,
-    question: 'What is the largest ocean on Earth?',
-    options: ['Atlantic Ocean', 'Indian Ocean', 'Arctic Ocean', 'Pacific Ocean'],
-    answer: 'Pacific Ocean',
+    question: 'Which SDG is dedicated to achieving gender equality and empowering all women and girls?',
+    options: ['SDG 4: Quality Education', 'SDG 5: Gender Equality', 'SDG 10: Reduced Inequalities', 'SDG 16: Peace, Justice and Strong Institutions'],
+    answer: 'SDG 5: Gender Equality',
   },
   {
     id: 5,
-    question: 'In which year did World War II end?',
-    options: ['1945', '1939', '1918', '1950'],
-    answer: '1945',
+    question: 'Which SDG aims to ensure healthy lives and promote well-being for all at all ages?',
+    options: ['SDG 2: Zero Hunger', 'SDG 3: Good Health and Well-Being', 'SDG 6: Clean Water and Sanitation', 'SDG 8: Decent Work and Economic Growth'],
+    answer: 'SDG 3: Good Health and Well-Being',
   },
   {
     id: 6,
-    question: 'What is the chemical symbol for gold?',
-    options: ['Au', 'Ag', 'Gd', 'Go'],
-    answer: 'Au',
+    question: 'What is the focus of SDG 14?',
+    options: ['Affordable and Clean Energy', 'Climate Action', 'Life Below Water', 'Clean Water and Sanitation'],
+    answer: 'Life Below Water',
   },
   {
     id: 7,
-    question: 'Who painted the Mona Lisa?',
-    options: ['Leonardo da Vinci', 'Vincent van Gogh', 'Pablo Picasso', 'Michelangelo'],
-    answer: 'Leonardo da Vinci',
+    question: 'Which SDG seeks to build resilient infrastructure, promote inclusive and sustainable industrialization, and foster innovation?',
+    options: ['SDG 8: Decent Work and Economic Growth', 'SDG 9: Industry, Innovation, and Infrastructure', 'SDG 12: Responsible Consumption and Production', 'SDG 11: Sustainable Cities and Communities'],
+    answer: 'SDG 9: Industry, Innovation, and Infrastructure',
   },
   {
     id: 8,
-    question: 'What is the smallest prime number?',
-    options: ['2', '3', '5', '1'],
-    answer: '2',
+    question: 'Which SDG focuses on ending hunger, achieving food security, and promoting sustainable agriculture?',
+    options: ['SDG 2: Zero Hunger', 'SDG 3: Good Health and Well-Being', 'SDG 6: Clean Water and Sanitation', 'SDG 12: Responsible Consumption and Production'],
+    answer: 'SDG 2: Zero Hunger',
   },
   {
     id: 9,
-    question: 'Which country is known as the Land of the Rising Sun?',
-    options: ['Japan', 'China', 'Thailand', 'South Korea'],
-    answer: 'Japan',
+    question: 'SDG 6 is about ensuring availability and sustainable management of what?',
+    options: ['Clean Water and Sanitation', 'Affordable and Clean Energy', 'Decent Work and Economic Growth', 'Life on Land'],
+    answer: 'Clean Water and Sanitation',
   },
   {
     id: 10,
-    question: 'How many continents are there on Earth?',
-    options: ['5', '6', '7', '8'],
-    answer: '7',
+    question: 'How many SDGs are there in total?',
+    options: ['15', '16', '17', '18'],
+    answer: '17',
   }
-]
+];
 
 export default function QuizApp() {
   const [selectedAnswers, setSelectedAnswers]: any = useState({})
@@ -97,7 +97,7 @@ export default function QuizApp() {
       <div className="min-h-screen bg-black text-gray-300 transition-colors duration-200">
         <div className="container mx-auto px-4 py-8">
           <div className="flex justify-between items-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-100">General Knowledge Quiz</h1>
+            <h1 className="text-3xl font-bold text-gray-100">Interactive Quiz on SDG</h1>
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="p-2 rounded-full bg-gray-800 text-gray-300 transition-colors duration-200"

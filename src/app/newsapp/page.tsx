@@ -1,3 +1,4 @@
+"use client"
 import { useState, useEffect } from 'react'
 import { ArrowRight, ExternalLink, Globe } from 'lucide-react'
 
@@ -40,7 +41,7 @@ export default function page() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSDG((prev) => (prev % sdgs.length) + 1)
-    }, 10000) // Changed to 10 seconds
+    }, 2000) // Changed to 10 seconds
     return () => clearInterval(timer)
   }, [])
 
