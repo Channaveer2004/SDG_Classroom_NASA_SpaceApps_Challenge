@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  background-color: #1a1a1a;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #4fc3f7;
+  text-decoration: underline;
+}
+
+/* General button styling */
+button {
+  background-color: #4fc3f7;
+  color: #0d0d0d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #039be5;
+  transform: translateY(-2px);
+}
+
+/* Form inputs and text areas */
+textarea, input, select {
+  display: block;
+  margin: 15px 0;
+  width: 100%;
+  padding: 12px;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  box-sizing: border-box;
+}
+
+textarea:focus, input:focus, select:focus {
+  border-color: #4fc3f7;
+  outline: none;
+}
+
+/* Home Container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #0d0d0d;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #4fc3f7;
+}
+
+/* Home Cards */
+.home-cardContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+  gap: 20px;
+}
+
+.home-card {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  padding: 30px;
+  margin: 15px;
+  width: 320px;
+  height: 220px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.home-card h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #4fc3f7;
+  font-weight: 600;
+}
+
+.home-card p {
+  color: #a0a0a0;
+  margin-top: 15px;
+}
+
+.home-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Posts */
+.post {
+  background-color: #1a1a1a;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+.post p {
+  margin: 0;
+  color: #b0b0b0;
+}
+
+.post:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+/* SDG Grid */
+.sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+.sdg-card {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sdg-card a {
+  text-decoration: none;
+  color: #4fc3f7;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sdg-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.sdg-card a:hover {
+  color: #039be5;
+  text-decoration: underline;
+}
+
+/* Headings */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #e0e0e0;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  line-height: 1.2;
+}
+
+/* Select dropdown */
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  font-size: 1.25rem;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  border: 1px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #4fc3f7;
+  outline: none;
+}
+
+option {
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+}

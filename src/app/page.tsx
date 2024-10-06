@@ -10,6 +10,9 @@ import GlobePage from "./globe"
 // import FloatingWordsBackground from "./globeBg"
 import SDGOverlay from "./globeBg"
 // import QuizPage from "./quizPage/page"
+import Footer from "./footer/page"
+import newpage from "@/app/newsapp/newpage"
+
 
 
 export default function Home() {
@@ -51,7 +54,7 @@ export default function Home() {
               </p>
               <div className="mt-8 flex justify-end">
                 <a
-                  href="#learn-more"
+                  href=""
                   className="inline-flex items-center px-6 py-3 border border-gray-600 text-base font-medium rounded-md text-gray-200 bg-gray-700 hover:bg-gray-600 transition duration-150 ease-in-out"
                 >
                   Learn More
@@ -63,7 +66,7 @@ export default function Home() {
 
         <RoleSelectionComponent />
 
-        
+        <Footer />
 
       </div>
     </div>
