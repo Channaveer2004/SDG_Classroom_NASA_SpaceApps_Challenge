@@ -9,13 +9,13 @@ import GlobePage from "./globe"
 // import Component from "./globeBg"
 // import FloatingWordsBackground from "./globeBg"
 import SDGOverlay from "./globeBg"
-import QuizPage from "./QuizPage/page"
+// import QuizPage from "./quizPage/page"
 
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-black flex flex-col items-center p-4">
-      {/* <NavbarDemo /> */}
+      <NavbarDemo />
       <div className="relative w-full h-[30rem]">
         <VortexDemo />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
@@ -35,7 +35,7 @@ export default function Home() {
 
 
         <div className="w-9/10 max-w-none mx-auto p-8 mt-12">
-          <div className="flex flex-col items-center justify-center min-h-screen bg-red-900 p-4 max-w-[calc(100%-8px)] border border-radius-lg rounded-2xl">
+          <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 p-4 max-w-[calc(100%+15px)] border border-radius-lg rounded-2xl">
 
             <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]"></div>
             <div className="relative p-8 sm:p-10">
@@ -63,7 +63,7 @@ export default function Home() {
 
         <RoleSelectionComponent />
 
-        {/* <QuizPage/> */}
+        
 
       </div>
     </div>

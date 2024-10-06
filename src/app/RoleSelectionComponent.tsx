@@ -12,7 +12,7 @@ export default function RoleSelectionComponent() {
 
   return (
 
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 p-4 max-w-[calc(100%-10px)] border border-radius-lg rounded-2xl">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 p-6 max-w-[calc(100%-55px)] border border-radius-lg rounded-2xl ml-7">
 
       <h1 className="text-3xl font-bold mb-8 text-gray-100">Select Your Role</h1>
       <div className="flex flex-wrap justify-center gap-8 max-w-4xl w-9/10 mx-auto">
@@ -64,9 +64,10 @@ export default function RoleSelectionComponent() {
 
       <a href="SdgCards">
 
-        <button className="mt-4 px-6 py-3 border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-300 rounded-full bg-gray-900">
+        <button className="mt-4 px-6 py-3 border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-500 ease-in-out rounded-full bg-gray-900">
           Explore Sustainable Development Goals
         </button>
+
       </a>
 
     </div>
