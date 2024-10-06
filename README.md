@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sustainable Development Goals for Classroom
 
-## Getting Started
+A web platform designed to help students and teachers engage with the 17 Sustainable Development Goals (SDGs). This platform provides learning materials, resources, and interactive content to understand and contribute to global sustainability efforts.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Check out the live deployed application [here](https://yourdeployedlink.com).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## User Roles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. *Teachers*
+   - *Community Forum*: Share ideas and resources related to SDGs.
+   - *Webinars and Events*: Join live webinars and virtual events focused on SDG topics.
+   - *Lesson Sharing*: Upload and share lesson plans with other teachers to foster collaboration.
+   
+2. *Students*
+   - *Resources*: Access a library of resources to learn about the SDGs and how to implement sustainable practices.
+   - *Interactive Content*: Participate in quizzes, projects, and activities related to the SDGs.
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- User authentication system (login for students and teachers).
+- Access to SDG-related learning materials and resources.
+- Community forums for discussion and idea sharing.
+- Lesson plan uploads for teachers to collaborate.
+- Integration with live webinars and event platforms.
+- Responsive design for desktop and mobile.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Prerequisites
 
-## Deploy on Vercel
+- Node.js (v14 or higher)
+- NPM (v6 or higher)
+- Git
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Steps to Install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. *Clone the repository*:
+   bash
+   git clone https://github.com/yourusername/projectname.git
+
+2. **Install the dependencies**:
+   bash
+   npm install
+
+3. *Run the App*:
+   ```bash
+   npm run dev
