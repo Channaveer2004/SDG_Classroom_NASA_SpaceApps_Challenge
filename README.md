@@ -3,9 +3,6 @@
 A web platform designed to help students and teachers engage with the 17 Sustainable Development Goals (SDGs). This platform provides learning materials, resources, and interactive content to understand and contribute to global sustainability efforts.
 
 
-## Live Demo
-
-Check out the live deployed application [here](https://yourdeployedlink.com).
 
 ## User Roles
 
