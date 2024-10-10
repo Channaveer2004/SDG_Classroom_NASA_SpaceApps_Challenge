@@ -49,9 +49,9 @@ A web platform designed to help students and teachers engage with the 17 Sustain
 
 
 # Landing Page
-![mainpage](https://github.com/Channaveer2004/SDG_Classroom_NASA_SpaceApps_Challenge/tree/master/assets/main.png)
+![mainpage](https://github.com/Channaveer2004/SDG_Classroom_NASA_SpaceApps_Challenge/blob/master/assets/images/main.png)
 
-![globe](https://github.com/Channaveer2004/SDG_Classroom_NASA_SpaceApps_Challenge/tree/master/assets/globe.png)
+![globe](https://github.com/Channaveer2004/SDG_Classroom_NASA_SpaceApps_Challenge/blob/master/assets/images/globe.png)
 
 # INTERACTIVE QUIZ on SDG
-![quiz](https://github.com/Channaveer2004/SDG_Classroom_NASA_SpaceApps_Challenge/tree/master/assets/interactivequiz.png)
+![quiz](https://github.com/Channaveer2004/SDG_Classroom_NASA_SpaceApps_Challenge/blob/master/assets/images/interactivequiz.png)
