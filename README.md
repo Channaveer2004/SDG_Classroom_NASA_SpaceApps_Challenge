@@ -45,3 +45,13 @@ A web platform designed to help students and teachers engage with the 17 Sustain
 3. *Run the App*:
    ```bash
    npm run dev
+
+
+
+# Landing Page
+![mainpage](https://github.com/Channaveer2004/SDG_Classroom_NASA_SpaceApps_Challenge/tree/master/assets/main.png)
+
+![globe](https://github.com/Channaveer2004/SDG_Classroom_NASA_SpaceApps_Challenge/tree/master/assets/globe.png)
+
+# INTERACTIVE QUIZ on SDG
+![quiz](https://github.com/Channaveer2004/SDG_Classroom_NASA_SpaceApps_Challenge/tree/master/assets/interactivequiz.png)
