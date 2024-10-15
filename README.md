@@ -3,9 +3,6 @@
 A web platform designed to help students and teachers engage with the 17 Sustainable Development Goals (SDGs). This platform provides learning materials, resources, and interactive content to understand and contribute to global sustainability efforts.
 
 
-## Live Demo
-
-Check out the live deployed application [here](https://yourdeployedlink.com).
 
 ## User Roles
 
@@ -48,3 +45,13 @@ Check out the live deployed application [here](https://yourdeployedlink.com).
 3. *Run the App*:
    ```bash
    npm run dev
+
+
+
+# Landing Page
+![mainpage](https://github.com/Channaveer2004/SDG_Classroom_NASA_SpaceApps_Challenge/blob/master/assets/images/main.png)
+
+![globe](https://github.com/Channaveer2004/SDG_Classroom_NASA_SpaceApps_Challenge/blob/master/assets/images/globe.png)
+
+# INTERACTIVE QUIZ on SDG
+![quiz](https://github.com/Channaveer2004/SDG_Classroom_NASA_SpaceApps_Challenge/blob/master/assets/images/interactivequiz.png)
