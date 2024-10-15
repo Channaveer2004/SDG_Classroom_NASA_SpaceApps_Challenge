@@ -6,12 +6,9 @@ import { BookOpen } from 'lucide-react'
 import { useState } from 'react';
 import RoleSelectionComponent from "./RoleSelectionComponent"
 import GlobePage from "./globe"
-// import Component from "./globeBg"
-// import FloatingWordsBackground from "./globeBg"
 import SDGOverlay from "./globeBg"
-// import QuizPage from "./quizPage/page"
 import Footer from "./footer/page"
-import newpage from "@/app/newsapp/page"
+
 
 
 

@@ -276,5 +276,5 @@ const TextAnimate: FC<Props> = ({
   )
 }
 
-export { TextAnimate }
+
 export default TextAnimate

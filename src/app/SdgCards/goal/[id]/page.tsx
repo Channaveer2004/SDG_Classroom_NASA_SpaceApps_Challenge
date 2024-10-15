@@ -177,7 +177,6 @@ const cards = [
     ];
   
   
-
     export default function GoalPage({ params }: { params: { id: string } }) {
         const [goal, setGoal] = useState<{ id: number; title: string; content: string; imageUrl: string } | undefined>();
       

@@ -1,8 +1,5 @@
 "use client"
 import { useState } from 'react';
-import Teacher from './teachers/page';
-
-
 
 export default function RoleSelectionComponent() {
   const [selectedRole, setSelectedRole] = useState<string | null>(null);
@@ -64,14 +61,10 @@ export default function RoleSelectionComponent() {
       </div>
 
       <a href="SdgCards">
-
-      <button className="mt-8 mb-8 px-12 py-6 border-4 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-500 ease-in-out rounded-full bg-gray-900 text-2xl font-bold">
-  Explore Sustainable Development Goals
-</button>
-
-
+        <button className="mt-8 mb-8 px-12 py-6 border-4 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-500 ease-in-out rounded-full bg-gray-900 text-2xl font-bold">
+          Explore Sustainable Development Goals
+        </button>
       </a>
-
     </div>
 
 
