@@ -110,7 +110,7 @@ export default function Page() {
 
   return (
     <div className="container mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-8">Sustainable Development Goals</h1>
+      <h1 className="text-4xl font-extrabold mb-12 text-center text-blue-300">Sustainable Development Goals</h1>
       <CardGrid cards={cards} />
     </div>
   )
@@ -132,43 +132,38 @@ function CardGrid({ cards }: { cards: { id: number; title: string; content: stri
         placeholder="Search cards..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="mb-6 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
+        className="mb-8 w-full p-4 border border-blue-600 rounded-lg shadow-md bg-gray-800 text-white focus:border-blue-400"
       />
 
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredCards.map((card) => (
           <Link key={card.id} href={`/goal/${card.id}`}>
-            <Card className="bg-black border shadow rounded-lg overflow-hidden">
+            <Card className="bg-gray-900 border border-blue-700 shadow-lg rounded-xl overflow-hidden transform transition hover:scale-105 hover:shadow-2xl">
               <CardHeader>
-                <CardTitle>{card.title}</CardTitle>
                 <img 
                   src={card.imageUrl} 
                   alt={card.title} 
-                  className="w-full h-auto object-contain my-4" 
-                  style={{ maxHeight: '400px' }} 
+                  className="w-full h-72 object-cover" 
                 />
+                <CardTitle>{card.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>{card.content}</p>
+                <p className="text-gray-400 text-sm">{card.content}</p>
               </CardContent>
             </Card>
           </Link>
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 // UI Components
-function Input({ 
-  className, 
-  type = "text", 
-  ...props 
-}: React.InputHTMLAttributes<HTMLInputElement>) {
+function Input({ className, type = "text", ...props }: React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <input
       type={type}
-      className={`w-full p-3 border rounded-md shadow-sm focus:ring focus:ring-blue-200 focus:outline-none ${className}`}
+      className={`w-full p-3 border rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:outline-none ${className}`}
       {...props}
     />
   )
@@ -177,20 +172,20 @@ function Input({
 function Card({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={`rounded-lg border bg-white shadow-sm ${className}`}
+      className={`rounded-xl bg-gray-900 shadow-lg hover:shadow-xl transition ${className}`}
       {...props}
     />
   )
 }
 
 function CardHeader({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={`p-4 ${className}`} {...props} />
+  return <div className={`p-6 ${className}`} {...props} />
 }
 
 function CardTitle({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
     <h3
-      className={`text-xl font-semibold leading-none tracking-tight ${className}`}
+      className={`text-2xl font-semibold mt-4 mb-2 text-blue-300 ${className}`}
       {...props}
     />
   )

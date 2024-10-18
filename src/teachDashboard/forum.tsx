@@ -16,6 +16,7 @@ export default function CommunityForum() {
   return (
     <div>
       <h2>Community Forum</h2>
+      
       <form onSubmit={handlePostSubmit}>
         <textarea
           value={newPost}
