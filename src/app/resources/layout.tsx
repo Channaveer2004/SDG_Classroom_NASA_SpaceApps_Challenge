@@ -1,4 +1,4 @@
-// import './globals.css';
+// Layout.tsx
 
 export const metadata = {
   title: 'Course Resources',
@@ -7,13 +7,9 @@ export const metadata = {
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
-        <div className="container mx-auto p-4">
-          {children}
-        </div>
-      </body>
-    </html>
+    <div className="container mx-auto p-4">
+      {children}
+    </div>
   );
 };
 
