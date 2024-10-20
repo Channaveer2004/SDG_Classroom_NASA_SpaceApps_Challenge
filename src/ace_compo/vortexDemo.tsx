@@ -1,14 +1,16 @@
-"use client"
+"use client";
 import React from "react";
-import { Vortex } from "../components/ui/vortex";
+import { WavyBackground } from "../components/ui/vortex";
 
-export default function VortexDemo() {
+export function WavyBackgroundDemo() {
   return (
-    <div className="w-full mx-auto rounded-md h-[30rem] overflow-hidden mt-8">
-      <Vortex
-        backgroundColor="black"
-        className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"> 
-      </Vortex>
-    </div>
+    <WavyBackground className="max-w-4xl mx-auto pb-40">
+      <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
+       
+      </p>
+      <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
+        
+      </p>
+    </WavyBackground>
   );
 }
