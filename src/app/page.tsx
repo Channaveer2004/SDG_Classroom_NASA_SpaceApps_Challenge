@@ -1,5 +1,5 @@
 import React from "react"
-import VortexDemo from "../ace_compo/vortexDemo"
+import { WavyBackgroundDemo } from "@/ace_compo/vortexDemo"
 import { NavbarDemo } from "@/ace_compo/navBar"
 import { TextAnimate } from "@/ace_compo/HeaderText"
 import { BookOpen } from 'lucide-react'
@@ -17,7 +17,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-black to-black flex flex-col items-center p-4">
       <NavbarDemo />
       <div className="relative w-full h-[30rem]">
-        <VortexDemo />
+        <WavyBackgroundDemo />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
 
           <TextAnimate text="Sustainable Development Goals" type="fadeInUp" />
