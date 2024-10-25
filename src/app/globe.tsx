@@ -26,7 +26,7 @@ export default function GlobePage() {
       world.controls().enablePan = false;
 
       // Add clouds sphere
-      const CLOUDS_IMG_URL = "../public/clouds.png"; // Make sure to have the image accessible from the public folder
+      const CLOUDS_IMG_URL = "./clouds.png"; // Make sure to have the image accessible from the public folder
       const CLOUDS_ALT = 0.004;
       const CLOUDS_ROTATION_SPEED = -0.006; // deg/frame
 
