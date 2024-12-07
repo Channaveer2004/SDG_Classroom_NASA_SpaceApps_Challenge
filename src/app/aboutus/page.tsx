@@ -10,23 +10,29 @@ const members = [
     linkedin: 'https://www.linkedin.com/in/channaveer-bs/'
   },
   {
-    name: 'SHARATH M GOWDA',
-    email: 'msharathgowda7@gmail.com',
-    github: 'https://github.com/SharathxD',
-    linkedin: 'https://www.linkedin.com/in/sharath-gowda-30525b307/'
+    name: 'DHINAKAR G GOWDA',
+    email: 'dhinakar@gmail.com',
+    github: 'https://github.com/Dhinakar',
+    linkedin: 'https://www.linkedin.com/in/dhinakarG/'
   },
-  {
-    name: 'SHASHANK N',
-    email: 'shashankrnagaraju@gmail.com',
-    github: 'https://github.com/ShashankNagaraju',
-    linkedin: 'https://www.linkedin.com/in/shashank-n-49a12825a/'
-  },
-  {
-    name: 'SHASHIKIRAN B S',
-    email: 'shashikiran.banagere@outlook.com',
-    github: 'https://github.com/Shashi-bs',
-    linkedin: 'https://www.linkedin.com/in/shashikiran-banagere-003352278/'
-  }
+  // {
+  //   name: 'SHARATH M GOWDA',
+  //   email: 'msharathgowda7@gmail.com',
+  //   github: 'https://github.com/SharathxD',
+  //   linkedin: 'https://www.linkedin.com/in/sharath-gowda-30525b307/'
+  // },
+  // {
+  //   name: 'SHASHANK N',
+  //   email: 'shashankrnagaraju@gmail.com',
+  //   github: 'https://github.com/ShashankNagaraju',
+  //   linkedin: 'https://www.linkedin.com/in/shashank-n-49a12825a/'
+  // },
+  // {
+  //   name: 'SHASHIKIRAN B S',
+  //   email: 'shashikiran.banagere@outlook.com',
+  //   github: 'https://github.com/Shashi-bs',
+  //   linkedin: 'https://www.linkedin.com/in/shashikiran-banagere-003352278/'
+  // }
 ];
 
 function App() {
