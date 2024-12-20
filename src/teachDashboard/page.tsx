@@ -139,28 +139,10 @@ export default function TeacherDashboard() {
       ) : showForum ? (
         <div>
           <h1>Community Forum</h1>
-          <form onSubmit={handlePostSubmit}>
-            <textarea
-              value={newPost}
-              onChange={(e) => setNewPost(e.target.value)}
-              placeholder="      Share your ideas..."
-              required
-            />
-            <button type="submit">Post</button>
-          </form>
-          <div>
-            <h3>Ideas Shared</h3>
-            {posts.length > 0 ? (
-              posts.map((post, index) => (
-                <div key={index} className="post">
-                  <p>{post}</p>
-                </div>
-              ))
-            ) : (
-              <p>No posts yet. Be the first to share your ideas!</p>
-            )}
-          </div>
-          <button onClick={() => setShowForum(false)}>Back to Home</button>
+          
+          <a href="https://broadcast-chat-application.vercel.app/">
+          <button>chatroom</button>
+          </a>
         </div>
       ) : showLessonSharing ? (
         <div>
