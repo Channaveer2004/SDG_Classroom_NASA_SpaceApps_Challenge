@@ -1,22 +1,26 @@
 "use client"
 
 import { useRef, useState } from "react"
+import type { ReactNode } from "react"
 import { motion, useInView } from "framer-motion"
 
 // import { fadeIn } from "@/components/ui/headertext"
 
 import TextAnimate from "../components/ui/headertext"
 
-// @ts-ignore
-const AnimationDemo = ({ type, children }) => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
-  const [count, setCount] = useState(0)
+type AnimationDemoProps = {
+  children?: ReactNode;
+};
+
+function AnimationDemo({ children }: AnimationDemoProps) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  useInView(ref, { once: true });
+  const [count, setCount] = useState(0);
 
   return (
     <div className="flex flex-col relative" ref={ref}>
       <div className="mt-8">
-        {/* <FadeIn key={count}>{children}</FadeIn> */}
+        {children}
       </div>
       <div className="absolute top-0 -right-5 md:right-5">
         <Refresh onClick={() => setCount(count + 1)} />
@@ -38,11 +42,13 @@ const arrow = {
   hover: { rotate: 360, transition: { duration: 0.4 } },
 }
 
-// @ts-ignore
-const Refresh = ({ onClick }) => {
+// Framer Motion's type for variants may not match React's props exactly, safe to ignore for now
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
+const Refresh = ({ onClick }: { onClick: () => void }) => {
   return (
     <motion.div
-      className="p-1 border border-dotted rounded w-7 h-7  flex justify-center items-center cursor-pointer"
+      className="p-1 border border-dotted rounded w-7 h-7 flex justify-center items-center cursor-pointer"
       onClick={onClick}
       variants={button}
       initial="rest"
@@ -67,7 +73,7 @@ const Refresh = ({ onClick }) => {
 
 export function TextAnimationDemo() {
   return (
-    <AnimationDemo type="TextAnimate">
+    <AnimationDemo>
       <div>
         <div className="flex flex-col">
           <div className="flex flex-col py-4">

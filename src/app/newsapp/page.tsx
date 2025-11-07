@@ -35,7 +35,7 @@ const newsArticles = [
   // Add more news articles as needed
 ]
 
-export default function page() {
+export default function NewsPage() {
   const [currentSDG, setCurrentSDG] = useState(1)
 
   useEffect(() => {
@@ -47,10 +47,10 @@ export default function page() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <header className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 to-black">
+      <header className="bg-gradient-to-r from-gray-900 to-black px-4 py-10 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4">Sustainable Development Goals News</h1>
-          <p className="text-xl text-gray-300">
+          <h1 className="mb-4 text-3xl font-bold sm:text-4xl">Sustainable Development Goals News</h1>
+          <p className="text-base text-gray-300 sm:text-lg">
             Stay informed about the latest developments in global sustainability efforts
           </p>
         </div>
@@ -58,23 +58,23 @@ export default function page() {
 
       <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6">SDG Spotlight</h2>
-          <div className={`bg-gradient-to-br ${sdgs[currentSDG - 1].color} rounded-lg p-8 shadow-lg transition-all duration-500 ease-in-out`}>
-            <div className="flex flex-col md:flex-row items-center mb-6">
-              <div className="text-6xl mb-4 md:mb-0 md:mr-6 bg-white rounded-full p-4">
+          <h2 className="mb-6 text-2xl font-semibold sm:text-3xl">SDG Spotlight</h2>
+          <div className={`rounded-3xl bg-gradient-to-br ${sdgs[currentSDG - 1].color} p-6 shadow-xl transition-all duration-500 ease-in-out sm:p-8`}>
+            <div className="mb-6 flex flex-col items-center gap-4 text-center md:flex-row md:items-center md:justify-between md:text-left">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white text-4xl md:h-24 md:w-24 md:text-5xl">
                 {sdgs[currentSDG - 1].icon}
               </div>
-              <div>
-                <h3 className="text-3xl font-bold mb-2">{sdgs[currentSDG - 1].name}</h3>
-                <p className="text-xl">{sdgs[currentSDG - 1].description}</p>
+              <div className="max-w-2xl">
+                <h3 className="text-2xl font-bold sm:text-3xl">{sdgs[currentSDG - 1].name}</h3>
+                <p className="mt-2 text-base sm:text-lg">{sdgs[currentSDG - 1].description}</p>
               </div>
             </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3">
               <a
                 href={`https://sdgs.un.org/goals/goal${currentSDG}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-white text-black px-4 py-2 rounded-full hover:bg-opacity-90 transition-colors"
+                className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-opacity-90"
               >
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </a>
@@ -82,7 +82,7 @@ export default function page() {
                 href={`https://unstats.un.org/sdgs/report/2023/goal-${currentSDG}/`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-black bg-opacity-30 text-white px-4 py-2 rounded-full hover:bg-opacity-50 transition-colors"
+                className="inline-flex items-center rounded-full bg-black/30 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-black/50"
               >
                 View Statistics <Globe className="ml-2 h-4 w-4" />
               </a>
@@ -91,19 +91,19 @@ export default function page() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6">Latest SDG News</h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <h2 className="mb-6 text-2xl font-semibold sm:text-3xl">Latest SDG News</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {newsArticles.map((article, index) => (
-              <div key={index} className="bg-gray-900 rounded-lg p-6 shadow-lg">
-                <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
-                <p className="text-gray-400 mb-4">
+              <div key={index} className="rounded-3xl bg-gray-900/80 p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+                <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">{article.title}</h3>
+                <p className="mb-4 text-sm text-gray-400">
                   {article.source} - {new Date(article.date).toLocaleDateString()}
                 </p>
                 <a
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300"
+                  className="inline-flex items-center text-sm font-semibold text-blue-400 transition hover:text-blue-300 sm:text-base"
                 >
                   Read more <ExternalLink className="ml-2 h-4 w-4" />
                 </a>
@@ -113,12 +113,12 @@ export default function page() {
         </section>
 
         <section>
-          <h2 className="text-3xl font-semibold mb-6">All SDGs</h2>
+          <h2 className="mb-6 text-2xl font-semibold sm:text-3xl">All SDGs</h2>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {sdgs.map((sdg) => (
-              <div key={sdg.id} className="bg-gray-900 rounded-lg p-4 shadow-lg">
-                <span className="text-3xl mb-2 block">{sdg.icon}</span>
-                <h3 className="text-lg font-semibold">{sdg.name}</h3>
+              <div key={sdg.id} className="rounded-2xl border border-white/10 bg-gray-900/70 p-4 text-center shadow-lg transition hover:border-blue-400/50">
+                <span className="mb-3 block text-2xl sm:text-3xl">{sdg.icon}</span>
+                <h3 className="text-sm font-semibold text-white sm:text-base">{sdg.name}</h3>
               </div>
             ))}
           </div>

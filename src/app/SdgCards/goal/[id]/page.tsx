@@ -1,6 +1,5 @@
 'use client'
 
-import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 const cards = [
@@ -177,39 +176,45 @@ const cards = [
     ];
   
   
-    export default function GoalPage({ params }: { params: { id: string } }) {
-        const [goal, setGoal] = useState<{ id: number; title: string; content: string; imageUrl: string } | undefined>();
-      
-        useEffect(() => {
-          const card = cards.find((c) => c.id === Number(params.id));
-          setGoal(card);
-        }, [params.id]);
-      
-        if (!goal) {
-          return <div className="flex items-center justify-center h-screen">
-            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
-          </div>;
-        }
-      
-        return (
-          <div className="container mx-auto p-8 flex flex-col-reverse md:flex-row items-center md:items-start gap-8">
-            <div className="md:w-1/2 w-full">
-              <div className="bg-card text-card-foreground rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
-                <h1 className="text-4xl font-bold mb-6 text-primary">{goal.title}</h1>
-                <p className="text-lg leading-relaxed">{goal.content}</p>
-              </div>
-            </div>
-            <div className="md:w-1/2 w-full">
-              <div className="relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
-                <img 
-                  src={goal.imageUrl} 
-                  alt={goal.title} 
-                  className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" 
-                  style={{ aspectRatio: '1/1', maxWidth: '3072px', maxHeight: '3072px' }}
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-opacity duration-300"></div>
-              </div>
-            </div>
-          </div>
-        );
-      }
+export default function GoalPage({ params }: { params: { id: string } }) {
+  const [goal, setGoal] = useState<{ id: number; title: string; content: string; imageUrl: string } | undefined>();
+
+  useEffect(() => {
+    const card = cards.find((c) => c.id === Number(params.id));
+    setGoal(card);
+  }, [params.id]);
+
+  if (!goal) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-black px-4">
+        <div className="h-12 w-12 animate-spin rounded-full border-4 border-blue-400 border-t-transparent" aria-label="Loading" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="mx-auto flex w-full max-w-6xl flex-col-reverse gap-8 px-4 py-12 sm:flex-row sm:px-6 lg:px-8">
+      <div className="w-full sm:w-1/2">
+        <div className="rounded-3xl border border-white/10 bg-gray-900/85 p-6 shadow-xl transition hover:border-blue-400/60 hover:shadow-2xl">
+          <p className="inline-flex items-center justify-center rounded-full border border-blue-500/40 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-blue-300/90 sm:text-sm">
+            Goal {goal.id}
+          </p>
+          <h1 className="mt-4 text-3xl font-bold text-white sm:text-4xl">{goal.title}</h1>
+          <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-gray-300 sm:text-base">
+            {goal.content}
+          </p>
+        </div>
+      </div>
+      <div className="w-full sm:w-1/2">
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gray-800/80 shadow-xl">
+          <img
+            src={goal.imageUrl}
+            alt={goal.title}
+            className="h-full w-full object-cover"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        </div>
+      </div>
+    </div>
+  );
+}

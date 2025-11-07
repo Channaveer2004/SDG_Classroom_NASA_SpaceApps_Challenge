@@ -2,7 +2,7 @@ import React from 'react';
 
 const SDGOverlay = () => {
   return (
-    <div className="absolute inset-0 pointer-events-none flex justify-center items-center z-10">
+    <div className="absolute inset-0 z-10 hidden items-center justify-center pointer-events-none sm:flex">
       {/* SDG Words - Dispersed with Different Font Sizes and Boldness */}
       <span className="absolute top-5 left-1/4 transform -translate-x-1/2 text-white font-bold text-2xl md:text-3xl lg:text-4xl drop-shadow-md">
         No Poverty

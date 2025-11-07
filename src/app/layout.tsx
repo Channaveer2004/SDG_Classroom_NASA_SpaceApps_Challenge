@@ -47,12 +47,12 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="bg-black text-white min-h-screen">
         {/* Header */}
-        <header className="flex justify-end items-center p-4">
-          <nav>
-            <button className="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+        <header className="flex justify-end">
+          <div className="flex w-full max-w-6xl items-center justify-end px-4 py-3 sm:px-6">
+            {/* <button className="rounded-full border border-blue-500/60 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-600/80 sm:px-5 sm:py-2.5 sm:text-base">
               Sign In
-            </button>
-          </nav>
+            </button> */}
+          </div>
         </header>
 
         {/* Main Content */}

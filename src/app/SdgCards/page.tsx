@@ -109,8 +109,16 @@ export default function Page() {
   ]
 
   return (
-    <div className="container mx-auto p-8">
-      <h1 className="text-4xl font-extrabold mb-12 text-center text-blue-300">Sustainable Development Goals</h1>
+    <div className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="text-center">
+        <p className="mx-auto inline-flex items-center justify-center rounded-full border border-blue-500/40 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-blue-300/90 sm:text-sm">
+          Explore the goals
+        </p>
+        <h1 className="mt-4 text-3xl font-extrabold text-blue-300 sm:text-4xl">Sustainable Development Goals</h1>
+        <p className="mt-3 text-sm text-gray-300 sm:text-base">
+          Learn more about each global goal and find focused information that matters to you.
+        </p>
+      </div>
       <CardGrid cards={cards} />
     </div>
   )
@@ -135,15 +143,15 @@ function CardGrid({ cards }: { cards: { id: number; title: string; content: stri
         className="mb-8 w-full p-4 border border-blue-600 rounded-lg shadow-md bg-gray-800 text-white focus:border-blue-400"
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filteredCards.map((card) => (
-          <Link key={card.id} href={`/goal/${card.id}`}>
-            <Card className="bg-gray-900 border border-blue-700 shadow-lg rounded-xl overflow-hidden transform transition hover:scale-105 hover:shadow-2xl">
+          <Link key={card.id} href={`/SdgCards/goal/${card.id}`}>
+            <Card className="overflow-hidden rounded-2xl border border-blue-700/40 bg-gray-900/85 shadow-xl transition hover:-translate-y-1 hover:scale-[1.01] hover:border-blue-500/70 hover:shadow-2xl">
               <CardHeader>
                 <img 
                   src={card.imageUrl} 
                   alt={card.title} 
-                  className="w-full h-72 object-cover" 
+                  className="h-60 w-full object-cover sm:h-64"
                 />
                 <CardTitle>{card.title}</CardTitle>
               </CardHeader>

@@ -37,33 +37,35 @@ const members = [
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center w-full h-screen p-5">
-      <h1 className="text-5xl text-center mb-12">About Us</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+    <div className="min-h-screen w-full bg-black px-4 py-12 text-gray-100 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+        <p className="inline-flex items-center justify-center rounded-full border border-blue-500/40 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-blue-300/90 sm:text-sm">
+          The team
+        </p>
+        <h1 className="mt-4 text-3xl font-bold sm:text-4xl">About Us</h1>
+        <p className="mt-3 max-w-3xl text-sm text-gray-300 sm:text-base">
+          We are a group of learners and educators advocating for sustainable development. Connect with us through the channels below.
+        </p>
+      </div>
+      <div className="mx-auto mt-10 grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2">
         {members.map((member, index) => (
-          <div className="bg-gray-800 text-white p-5 rounded-lg transform transition-transform hover:scale-105" key={index}>
-            <h2 className="text-2xl mb-4">{member.name}</h2>
-            <p>
-              <a href={`mailto:${member.email}`} className="flex items-center mb-3 text-white no-underline">
-                <FaEnvelope className="mr-3" /> {/* Email Icon */}
-                <span className="text-base">{member.email}</span>
-              </a>
-            </p>
+          <div className="rounded-3xl border border-white/10 bg-gray-900/80 p-6 text-left shadow-xl transition hover:-translate-y-1 hover:border-blue-400/60 hover:shadow-2xl" key={index}>
+            <h2 className="text-xl font-semibold text-white sm:text-2xl">{member.name}</h2>
+            <a href={`mailto:${member.email}`} className="mt-4 flex items-center gap-3 rounded-2xl border border-white/10 px-4 py-3 text-sm text-gray-200 transition hover:border-blue-400/60 hover:bg-gray-800/70 sm:text-base">
+              <FaEnvelope className="text-blue-300" />
+              <span className="break-all">{member.email}</span>
+            </a>
 
             {/* Social Links */}
-            <div className="mt-4">
-              <div>
-                <a href={member.github} target="_blank" rel="noopener noreferrer" className="flex items-center mb-2 text-white no-underline">
-                  <FaGithub className="mr-3" /> {/* GitHub Icon */}
-                  <span className="text-base">GitHub</span>
-                </a>
-              </div>
-              <div>
-                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center text-white no-underline">
-                  <FaLinkedin className="mr-3" /> {/* LinkedIn Icon */}
-                  <span className="text-base">LinkedIn</span>
-                </a>
-              </div>
+            <div className="mt-5 flex flex-col gap-3">
+              <a href={member.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-gray-200 transition hover:text-blue-300 sm:text-base">
+                <FaGithub className="text-blue-300" />
+                <span>GitHub</span>
+              </a>
+              <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-gray-200 transition hover:text-blue-300 sm:text-base">
+                <FaLinkedin className="text-blue-300" />
+                <span>LinkedIn</span>
+              </a>
             </div>
           </div>
         ))}

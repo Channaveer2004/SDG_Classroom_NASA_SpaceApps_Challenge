@@ -4,7 +4,11 @@ import { WavyBackground } from "../components/ui/vortex";
 
 export function WavyBackgroundDemo() {
   return (
-    <WavyBackground className="max-w-4xl mx-auto pb-40">
+    <WavyBackground
+      className="max-w-3xl mx-auto px-4 text-center"
+      containerClassName="relative h-full w-full"
+      backgroundFill="rgba(0,0,0,0.65)"
+    >
       <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
        
       </p>

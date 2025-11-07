@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from 'react';
-import Layout from './layout';
 
 const Footer: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -58,37 +57,44 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 p-6 max-w-[calc(100%-55px)] border border-radius-lg rounded-2xl ml-7">
-        <div className="w-[1000px] max-w-[1400px] bg-gray-800 hover:bg-gray-700 transition-colors rounded-xl shadow-xl overflow-hidden p-8 border border-[#004080]">
-          <h2 className="text-center text-3xl font-extrabold mb-8 text-gray-100">Frequently Asked Questions</h2>
-          <ul className="list-none m-0 p-0">
-            {faqData.map((faq, index) => (
-              <li key={index} className="bg-gray-700 rounded-lg border border-gray-600 mb-4 transition-colors duration-300 ease-in-out">
-                <button
-                  className="w-full text-left p-6 bg-transparent border-none cursor-pointer transition-all duration-300 ease-in-out hover:bg-gray-600 hover:rounded-xl"
-                  onClick={() => toggleFaq(index)}
-                >
-                  <div className="flex justify-between items-center">
-                    <span className="text-2xl font-semibold text-gray-100">{faq.question}</span>
-                    <span
-                      className={`text-[#5f9ea0] transition-transform duration-300 ease-in-out ${openIndex === index ? 'rotate-180' : ''}`}
-                    >
-                      ▼
-                    </span>
-                  </div>
-                </button>
-                {openIndex === index && (
-                  <div className="p-6 bg-gray-600 rounded-lg">
-                    <p className="text-lg text-gray-300">{faq.answer}</p>
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
+    <section className="w-full bg-black px-4 py-12 text-gray-100 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-5xl rounded-3xl border border-white/10 bg-gray-900/85 p-6 shadow-2xl backdrop-blur sm:p-10">
+        <div className="text-center">
+          <p className="mx-auto inline-flex items-center justify-center rounded-full border border-blue-500/40 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-blue-300/90 sm:text-sm">
+            Support hub
+          </p>
+          <h2 className="mt-4 text-2xl font-bold sm:text-3xl">Frequently Asked Questions</h2>
+          <p className="mt-3 text-sm text-gray-300 sm:text-base">
+            Have something on your mind? Tap a question to learn more about the goals and how you can get involved.
+          </p>
         </div>
+        <ul className="mt-8 space-y-4">
+          {faqData.map((faq, index) => (
+            <li key={index} className="overflow-hidden rounded-2xl border border-white/10 bg-gray-800/80 shadow-lg transition hover:border-blue-400/60">
+              <button
+                className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left text-base font-medium text-white transition hover:bg-gray-800/90 sm:px-6 sm:py-5 sm:text-lg"
+                onClick={() => toggleFaq(index)}
+              >
+                <span className="flex-1">{faq.question}</span>
+                <span
+                  className={`text-blue-300 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
+                  aria-hidden
+                >
+                  ▼
+                </span>
+              </button>
+              <div
+                className={`grid transition-all duration-300 ease-out ${openIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+              >
+                <div className="overflow-hidden px-4 pb-4 text-sm text-gray-300 whitespace-pre-line sm:px-6 sm:pb-6 sm:text-base">
+                  {faq.answer}
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
-    </Layout>
+    </section>
   );
 };
 

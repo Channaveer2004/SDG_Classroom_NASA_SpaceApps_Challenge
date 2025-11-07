@@ -1,7 +1,8 @@
 "use client"
 
-import { FC, useEffect, useRef } from "react"
-import { HTMLMotionProps, motion, useAnimation, useInView } from "framer-motion"
+import { FC, useRef } from "react"
+import { HTMLMotionProps, motion } from "framer-motion"
+import { cn } from "@/lib/utils"
 
 type AnimationType =
   | "fadeIn"
@@ -13,7 +14,7 @@ type AnimationType =
   | "whipInUp"
   | "calmInUp"
 
-interface Props extends HTMLMotionProps<"div"> {
+interface Props extends HTMLMotionProps<"h2"> {
   text: string
   type?: AnimationType
   delay?: number
@@ -194,6 +195,7 @@ const animationVariants = {
 const TextAnimate: FC<Props> = ({
   text,
   type = "whipInUp",
+  className,
   ...props
 }: Props) => {
   //   const { ref, inView } = useInView({
@@ -202,12 +204,12 @@ const TextAnimate: FC<Props> = ({
   //   });
 
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  // const isInView = useInView(ref, { once: true })
 
   const letters = Array.from(text)
   const { container, child } = animationVariants[type]
 
-  const ctrls = useAnimation()
+  // const ctrls = useAnimation()
 
   //   useEffect(() => {
   //     if (isInView) {
@@ -219,8 +221,10 @@ const TextAnimate: FC<Props> = ({
   //   }, [ctrls, isInView]);
 
   if (type === "rollIn" || type === "whipIn") {
+    const baseClassName =
+      "mt-4 text-xl font-light text-white dark:text-neutral-100 text-center max-w-5xl mx-auto md:text-2xl"
     return (
-      <h2 className="mt-4 text-xl font-light text-white dark:text-neutral-100 text-center max-w-5xl mx-auto md:text-2xl">
+      <h2 className={cn(baseClassName, className)} {...props}>
         {text.split(" ").map((word, index) => {
           return (
             <motion.span
@@ -257,6 +261,9 @@ const TextAnimate: FC<Props> = ({
     )
   }
 
+  const baseMotionClassName =
+    "text-6xl font-black text-white dark:text-neutral-100 text-center md:text-7xl mt-20"
+
   return (
     <motion.h2
       style={{ display: "flex", overflow: "hidden" }}
@@ -264,7 +271,7 @@ const TextAnimate: FC<Props> = ({
       variants={container}
       initial="hidden"
       animate="visible"
-      className="text-6xl font-black text-white dark:text-neutral-100 text-center md:text-7xl mt-20"
+      className={cn(baseMotionClassName, className)}
       {...props}
     >
       {letters.map((letter, index) => (

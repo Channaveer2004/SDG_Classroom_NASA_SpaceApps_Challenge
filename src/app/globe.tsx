@@ -92,10 +92,30 @@ export default function GlobePage() {
       world.renderer().setAnimationLoop(() => {
         world.renderer().render(world.scene(), world.camera());
       });
+
+      const updateSize = () => {
+        if (!globeRef.current) return;
+        const { offsetWidth, offsetHeight } = globeRef.current;
+        world.width(offsetWidth);
+        world.height(offsetHeight);
+      };
+
+      updateSize();
+
+      const resizeObserver = new ResizeObserver(() => updateSize());
+      resizeObserver.observe(globeRef.current);
+
+      window.addEventListener('resize', updateSize);
+
+      return () => {
+        resizeObserver.disconnect();
+        window.removeEventListener('resize', updateSize);
+        world.renderer().setAnimationLoop(null);
+      };
     }
   }, []);
 
   return (
-    <div ref={globeRef} style={{ width: '80vw', height: '100vh' }} />
+    <div ref={globeRef} className="h-full w-full" />
   );
 }
