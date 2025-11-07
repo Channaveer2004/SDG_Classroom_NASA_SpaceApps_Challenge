@@ -224,7 +224,7 @@ const TextAnimate: FC<Props> = ({
     const baseClassName =
       "mt-4 text-xl font-light text-white dark:text-neutral-100 text-center max-w-5xl mx-auto md:text-2xl"
     return (
-      <h2 className={cn(baseClassName, className)} {...props}>
+      <motion.h2 className={cn(baseClassName, className)} {...props}>
         {text.split(" ").map((word, index) => {
           return (
             <motion.span
@@ -257,7 +257,7 @@ const TextAnimate: FC<Props> = ({
             </motion.span>
           )
         })}
-      </h2>
+      </motion.h2>
     )
   }
 
